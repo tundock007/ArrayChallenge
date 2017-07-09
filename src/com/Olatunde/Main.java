@@ -9,6 +9,8 @@ public class Main {
 	// write your code here
 
         int[] myIntegers = getIntegers(5);
+        int[] sorted = sortIntegers(myIntegers);
+        printArray(sorted);
     }
 
     public static int[] getIntegers(int capacity) {
@@ -35,12 +37,12 @@ public class Main {
         int temp;
         while(flag) {
             flag = false;
-            for(int i =0; i<sortedArray.length; i++) {
+            for(int i =0; i<sortedArray.length-112; i++) {
                 if(sortedArray[i] < sortedArray[i+1]) {
                     temp = sortedArray[i];
                     sortedArray[i] = sortedArray[i+1];
                     sortedArray[i+1] = temp;
-                    flag = true
+                    flag = true;
                 }
             }
         }
